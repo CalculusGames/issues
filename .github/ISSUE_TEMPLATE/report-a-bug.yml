@@ -1,0 +1,35 @@
+name: Report a Bug
+description: Report a Bug.
+labels: ['unconfirmed bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to report a bug. Please take time to fill out the information below.
+  - type: input
+    attributes:
+      label: Name
+      description: Which product are you reporting for?
+      placeholder: |
+        Ex: Combinatory
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Bug Type
+      description: What type of bug are you trying to report?
+      multiple: true
+      options:
+        - Visual Bug
+        - Functionality Bug
+        - Other Unexpected Behavior
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Description
+      placeholder: |
+        Ex: "Incorrect score is displayed"
+    validations:
+      required: true
